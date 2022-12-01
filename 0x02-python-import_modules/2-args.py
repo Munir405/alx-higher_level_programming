@@ -1,11 +1,16 @@
 #!/usr/bin/python3
-if __name__ == "__main__":
-    from sys import argv
-    userin = argv[1:]
-    size = len(userin)
-    print("{:d} {:s}{:s}".
-          format(size,
-                 "arguments" if (size) is not 1 else "argument",
-                 "." if (size) is 0 else ":"))
-    for idx, arg in enumerate(userin):
-        print("{:d}: {:s}".format(idx + 1, arg))
+
+from sys import argv
+
+# argument count minus the name of the script
+argc = len(argv) - 1
+if __name__ == '__main__':
+    if argc < 1:
+        print("0 arguments.")
+    else:
+        if argc == 1:
+            print(f"{argc} argument:")
+        else:
+            print(f"{argc} arguments:")
+        for index in range(1, argc + 1):
+            print(f"{index}: {argv[index]}")
