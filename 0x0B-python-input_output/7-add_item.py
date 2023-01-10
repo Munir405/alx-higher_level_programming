@@ -15,6 +15,7 @@ Contains funtion that adds and save to python obj to JSON file; loads objects
 
 """
 
+
 from sys import argv
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6_load_from_json_file').load_from_json_file
