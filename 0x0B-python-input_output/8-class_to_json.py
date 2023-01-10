@@ -1,10 +1,18 @@
 #!/usr/bin/python3
-"""JSON I/O module"""
+"""
+Module 8-class_to_json
 
+Contains function that returns
+dictionary description with simple data
+structure (list, dictionary, string)
+for JSON serialization of an object
+"""
 
 def class_to_json(obj):
-    """ returns the dictionary description
-    with simple data structure (list, dictionary,
-    string, integer and boolean) for JSON serialization of an object
+    """Returns dictionary description with simple data structure
+    (list, dictionary, string)
+    for JSON serialization of an object
+    Args:
+        Obj: python object
     """
-    return obj.
+    return obj.__dict__
